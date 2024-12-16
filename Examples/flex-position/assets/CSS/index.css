@@ -1,0 +1,215 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho com Flexbox */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007BFF;
+    color: white;
+    padding: 2px 15px;
+    position: fixed; /* Fixar no topo */
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main { 
+    padding: 20px;
+}
+
+#home {
+    text-align: center;
+    background: #e9f7ff;
+    border-radius: 8px;
+    
+}
+
+section {
+    padding: 25px 20px;
+    margin-top: 20px;
+    scroll-margin-top: 20px; /* Ajuste este valor para corresponder à altura do cabeçalho */
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 33%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Contato */
+.contato {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Formulário */
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox para cada linha de label e campo */
+.form-line {
+    display: flex;
+    flex-direction: column; /* Faz com que o label fique acima do campo */
+    margin-bottom: 15px;
+}
+
+.form-line label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-line input,
+.form-line textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.form-line input:focus,
+.form-line textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Botão de Envio */
+.contact-form button {
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 50px 50px;
+        margin-top: 100px;
+        scroll-margin-top: 100px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px) {
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 49%;
+        margin-bottom: 20px;
+    }
+    
+}

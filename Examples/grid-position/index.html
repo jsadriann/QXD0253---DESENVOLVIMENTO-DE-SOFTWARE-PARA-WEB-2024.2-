@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Completo</title>
+    <link rel="stylesheet" href="assets/CSS/index.css">
+</head>
+<body>
+
+    <!-- Menu -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section que contém todas as outras seções -->
+    <main>
+        <!-- Seção Home -->
+        <section id="home" class="home">
+            <div class="home-content">
+                <h1>Bem-vindo ao Nosso Site</h1>
+                <p>Explore nossos serviços e entre em contato conosco!</p>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos" class="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="grid-container">
+                <div class="item item-1">Serviço 1 - Detalhes aqui</div>
+                <div class="item item-2">Serviço 2 - Detalhes aqui</div>
+                <div class="item item-3">Serviço 3 - Detalhes aqui</div>
+                <div class="item item-4">Serviço 4 - Detalhes aqui</div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="contato">
+            <h2>Fale Conosco</h2>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-line">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-line">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="form-line">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
